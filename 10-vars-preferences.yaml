@@ -1,0 +1,17 @@
+- name: variables preference
+  hosts: ansiblemaster
+  connection: local
+  vars:
+    wishes: "Morning from play level var"
+  vars_files:
+  - vars.yaml
+  vars_prompt:
+  - name: wishes
+    prompt: please enter your wishes
+    private: no
+  tasks: # list of tasks/collections/modules
+  - name: printing variables preferences
+    vars:
+      wishes: "Morning from task level var"
+    ansible.builtin.debug:
+      msg: "Hi, Good {{wishes}}"
