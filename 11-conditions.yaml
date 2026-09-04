@@ -3,6 +3,7 @@
   tasks: #list of tasks/collections/modules
   - name: using conditions
     ansible.builtin.command: id expense
+    ignore_error: true
 
   - name: print info
     ansible.builtin.debug:
