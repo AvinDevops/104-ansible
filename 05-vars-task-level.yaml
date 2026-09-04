@@ -1,0 +1,16 @@
+- name: variables at task level
+  hosts: localhost
+  vars: #play level variable
+    Course: "DevOps"
+    Trainer: "Avinash"
+    Duration: "3.5 months"
+  tasks: #list of tasks/modules/collections
+  - name: printing overridden variables #override
+    vars: #task level variable
+      Course: "AWS" 
+    ansible.builtin.debug:
+      msg: "I am learning {{Course}} and trainer is {{Trainer}} and duration is {{Duration}} "
+
+  - name: printing inheritted variables #inheritance
+    ansible.builtin.debug:
+      msg: "I am learning {{Course}} and trainer is {{Trainer}} and duration is {{Duration}} "
