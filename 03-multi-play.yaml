@@ -7,4 +7,4 @@
   
   - name: Play-2 and Task-1
     ansible.builtin.debug:
-       msg: "This is Play-2 and Task-2"
+       msg: "This is Play-2 and Task-1"
