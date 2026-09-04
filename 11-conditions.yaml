@@ -3,8 +3,12 @@
   tasks: #list of tasks/collections/modules
   - name: using conditions
     ansible.builtin.command: id expense
+    regsiter: user_info
     ignore_errors: true
 
+  - name: print user info 
+    ansible.builtin.debug:
+      msg: "user info is: {{user_info}}"
   - name: print info
     ansible.builtin.debug:
       msg: "Hello, end of script"
