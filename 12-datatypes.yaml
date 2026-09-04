@@ -1,0 +1,17 @@
+- name: datatypes
+  hosts: localhost
+  vars:
+    course: "DevOps With Aws" # string
+    tools: # list
+    - linux
+    - shell
+    - ansible
+    experience: # map or dictionary
+      devops: 3
+      aws: 2
+      docker: 1
+    real_project: true # boolean
+  tasks: # list of tasks/collections/modules
+  - name: print datatypes
+    ansible.builtin.debug:
+      msg: "Course: {{course}}, Tools covered: {{tools}}, and Experience is: {{experience}}, is Real Prject: {{real_project}}"
