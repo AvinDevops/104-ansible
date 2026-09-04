@@ -1,5 +1,5 @@
 - name: variables
-  hosts: localhost
+  hosts: local
   vars: #define/declaring variables
     Course: "DevOps"
     Trainer: "Avinash"
