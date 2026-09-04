@@ -3,7 +3,7 @@
   tasks: #list of tasks/collections/modules
   - name: using conditions
     ansible.builtin.command: id expense
-    regsiter: user_info
+    register: user_info
     ignore_errors: true
 
   - name: print user info 
