@@ -1,0 +1,6 @@
+- name: variables through arguments
+  hosts: localhost
+  tasks: # list of tasks/collections/modules
+  - name: printing variables from arguments
+    ansible.builtin.debug:
+      msg: "Hi {{Person}}, Good {{Wishes}}"
