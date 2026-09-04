@@ -15,3 +15,5 @@
       wishes: "Morning from task level var"
     ansible.builtin.debug:
       msg: "Hi, Good {{wishes}}"
+
+#1.args
