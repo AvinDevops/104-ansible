@@ -1,5 +1,5 @@
 - name: variables from inventory
-  hosts: localhost
+  hosts: ansiblemaster
   tasks: # list of tasks/collections/modules
   - name: printing variables from inventory
     ansible.builtin.debug:
