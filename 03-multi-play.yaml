@@ -1,0 +1,10 @@
+- name: Multi-Play
+  hosts: localhost
+  tasks: #list of tasks/modules/collections
+  - name: Play-1 and Task-1
+    ansible.builtin.debug:
+      msg: "This is Play-1 and Task-1"
+  
+  - name: Play-2 and Task-1
+    ansible.builtin.debug:
+       msg: "This is Play-2 and Task-2"
