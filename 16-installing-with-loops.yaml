@@ -4,7 +4,7 @@
   tasks: # list of tasks/collections/modules
   - name: installing
     ansible.builtin.dnf:
-      name: {{item}}
+      name: "{{item}}"
       state: installed
     loop:
     - mysql
