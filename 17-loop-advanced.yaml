@@ -1,0 +1,12 @@
+- name: loops advanced
+  hosts: web
+  become: yes
+  tasks: # list of tasks/collections/modules
+  - name: using loop advanced
+    ansible.builtin.dnf:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+    loop:
+    - {name: "mysql", state: "absent"}
+    - {name: "nginx", state: "installed"}
+    - {name: "postfix", state: "absent"}
