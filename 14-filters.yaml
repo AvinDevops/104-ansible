@@ -4,3 +4,13 @@
   - name: default
     ansible.builtin.debug:
       msg: "{{course | default('ansible')}}"
+
+# uppercase
+- name: uppercase
+  hosts: localhost
+  vars:
+    greetings: "Hi, Good Morning"
+  tasks: #list of tasks/collections/modules
+  - name: convert into uppercase
+    ansible.builtin.debug:
+      msg: "{{greetings|upper}}"
